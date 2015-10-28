@@ -1,6 +1,6 @@
 }
 
-#elif !defined(GLEW_OSMESA) /* _UNIX */
+#else /* _UNIX */
 
 static void glxewInfo ()
 {
