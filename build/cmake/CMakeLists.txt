@@ -12,7 +12,7 @@ endif()
 
 set(CMAKE_DEBUG_POSTFIX d)
 
-option (BUILD_UTILS "utilities" ON)
+option (GLEW_BUILD_UTILS "utilities" OFF)
 
 set (GLEW_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../..)
 
@@ -85,7 +85,7 @@ install ( TARGETS ${targets_to_install}
           ARCHIVE DESTINATION lib${LIB_SUFFIX}
 )
 
-if (BUILD_UTILS)
+if (GLEW_BUILD_UTILS)
   add_executable (glewinfo ${GLEW_DIR}/src/glewinfo.c)
   target_link_libraries (glewinfo glew)
 
